@@ -6,4 +6,6 @@ Uses PHP, MySQL.
 
 Edit config.php database details. 
 
-## Warning: error-prone. I loooove contributors anyway. 
+## Warning: error-prone. 
+
+I loooove contributors. `:-)` 
