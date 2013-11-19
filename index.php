@@ -114,7 +114,7 @@ include 'checklogin.php';
 			$("#pulley").html("Tap to close");
 		}
 	});
-	$("#scrollable").scroll(function() {
+	setInterval(function() {
 		if ($("#scrollable").scrollTop()>=75) {
 			newbarvisible=false;
 		}
@@ -130,7 +130,7 @@ include 'checklogin.php';
 				$("#floating").fadeIn("slow");
 			}
 		}
-	});
+	}, 1000);
 	$("#list").on("click", ".post", function() {
 		postid=$(this).attr("class");
 		postid=postid.replace("post postid", "");
