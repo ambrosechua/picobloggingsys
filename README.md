@@ -4,8 +4,8 @@ picobloggingsys
 Error-prone microblogging system. 
 Uses PHP, MySQL. 
 
-Edit config.php database details. 
+Copy config-sample.php to config.php and edit database details. 
 
 ## Warning: error-prone. 
 
-I loooove contributors. `:-)` 
+I loooove contributors. `:-)`. Help me fix bugs.
