@@ -1,0 +1,1 @@
+back.png is refrenced in script in index.php line 180. 

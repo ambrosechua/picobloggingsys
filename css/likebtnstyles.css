@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Londrina+Solid);
+* {
+padding: 0;
+margin: 0;
+}
+body, html {
+width: 100%;
+background-size: 100px 100px;
+font-family: "Londrina Solid";
+font-size: 12px;
+text-align: right;
+}
+.btn, .btnm {
+letter-spacing:1px;
+font-family: "Londrina Solid";
+background-color: rgba(0, 0, 0, 0.5) ;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+border: 0;
+padding: 5px 8px;
+color: #eee;
+margin: 1px;
+font-size: 12px;
+-webkit-appearance: none;
+}
+.btn:hover {
+background-color: rgba(0, 0, 0, 0.6);
+}
+.btn:active {
+background-color: rgba(0, 0, 0, 0.7);
+}
+.btnm {
+display: inline-block;
+border-bottom-left-radius: 20px;
+border-top-left-radius: 20px;
+-webkit-border-bottom-left-radius: 20px;
+-webkit-border-top-left-radius: 20px;
+-moz-border-bottom-left-radius: 20px;
+-moz-border-top-left-radius: 20px;
+-o-border-bottom-left-radius: 20px;
+-o-border-top-left-radius: 20px;
+-ms-border-bottom-left-radius: 20px;
+-ms-border-top-left-radius: 20px;
+}

@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Londrina+Solid);
+* {
+padding: 0;
+margin: 0;
+}
+body, html {
+width: 100%;
+background: #aaa url(bg.gif) repeat top left;
+background-size: 100px 100px;
+font-family: "Londrina Solid";
+font-size: 17px;
+text-align: center;
+}
+
+form.login {
+text-align: left;
+width: 250px;
+margin: 10px auto 0 -100px;
+position: relative;
+left: 50%;
+}
+
+h1 {
+font-weight: 300;
+padding: 5px 20px 0px 20px;
+font-size: 30px;
+color: #444;
+}
+input, textarea {
+letter-spacing:1px;
+font-family: "Londrina Solid";
+background-color: rgba(0, 0, 0, 0.5) ;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+border: 0;
+padding: 10px;
+color: #eee;
+margin: 3px 5px 3px 5px;
+font-size: 17px;
+font-width: 15px;
+}
+textarea {
+	width: 90%;
+	height: 200px;
+}
+input:focus, textarea:focus {
+background-color: rgba(0, 0, 0, 0.6);
+}
+form {
+text-align: center;
+width: 100%;
+}
+#time {
+	width: 170px;
+	font-size: 12px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+input[type=submit], input[type=file] {
+	width: 33%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+}
+input[type=submit]:hover {
+background-color: rgba(0, 0, 0, 0.6);
+}
+input[type=submit]:active {
+background-color: rgba(0, 0, 0, 0.7);
+}
+input[type=file] {
+width: 90%;
+padding: 2px 5px;
+}
+.red {
+	color: #f00;
+	font-size: 10px;
+}
+.statusbarpadd {
+	display: none;
+	height: 20px;
+	width: 100%;
+}
+@keyframes loading {
+from {
+-webkit-transform: rotate(0deg);
+}
+to {
+-webkit-transform: rotate(360deg);
+}
+}
+@-moz-keyframes loading {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+@-webkit-keyframes loading {
+from {
+-webkit-transform: rotate(0deg);
+}
+to {
+-webkit-transform: rotate(360deg);
+}
+}
+@-o-keyframes loading {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+.loading {
+	width: 20px;
+	height: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	border-top-right-radius: 0px;
+	-webkit-border-radius: 10px;
+	-webkit-border-top-right-radius: 0px;
+	-moz-border-radius: 10px;
+	-moz-border-top-right-radius: 0px;
+	-o-border-radius: 10px;
+	-o-border-top-right-radius: 0px;
+	-ms-border-radius: 10px;
+	-ms-border-top-right-radius: 0px;
+	animation: loading 1s infinite;
+	-webkit-animation: loading 1s infinite;
+	-moz-animation: loading 1s infinite;
+	-o-animation: loading 1s infinite;
+	-ms-animation: loading 1s infinite;
+	display: inline-block;
+	margin-right: 5px;
+}
