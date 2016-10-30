@@ -6,7 +6,7 @@ include "connect.php";
 
 $mysql_table = MYSQL_TABLE;
 $qry="SELECT * FROM `$mysql_table` WHERE `id`='".mysqli_escape_string($_GET["id"])."'";
-$result=mysqli_query($qry);
+$result=mysqli_query($db, $qry);
 if($result) {
     if(mysqli_num_rows($result) == 1) {
 	    $row = mysqli_fetch_array($result);
@@ -29,5 +29,5 @@ if($result) {
 <?php
 	}
 }
-mysqli_close($link);
+mysqli_close($db);
 ?>

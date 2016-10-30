@@ -43,7 +43,7 @@ include 'checklogin.php';
 		include "connect.php";
 		$mysql_table = MYSQL_TABLE;
 		$qry="SELECT * FROM `$mysql_table` ORDER BY `$mysql_table`.`id` DESC LIMIT 0, 30 ";
-		$result=mysqli_query($qry);
+		$result=mysqli_query($db, $qry);
 		$iffirst=0;
 		$newlastid="null";
 		while ($row = mysqli_fetch_array($result)) {
@@ -54,7 +54,7 @@ include 'checklogin.php';
 				$iffirst=1;
 			}
 		}
-		mysqli_close($link);
+		mysqli_close($db);
 		?>
 		</div><!-- 
 		<br /><br /> -->

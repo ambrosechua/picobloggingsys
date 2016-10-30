@@ -40,14 +40,14 @@ include "../connect.php";
 
 $mysql_table = MYSQL_TABLE;
 $qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysqli_escape_string(nl2br($txt.$extrl))."', '".mysqli_escape_string($tim)."')";
-$result = mysqli_query($qry);
+$result = mysqli_query($db, $qry);
 
 if (!$result) {
-    die("Error! ".mysqli_error());
+    die("Error! ".mysqli_error($db));
 } else {
 	$allok = 1;
 }
-mysqli_close($link);
+mysqli_close($db);
 
 }
 ?>
