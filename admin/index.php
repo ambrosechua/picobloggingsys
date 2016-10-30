@@ -8,7 +8,8 @@ $allok = 2;
 $txt=$_POST["txt"];
 $tim=$_POST["tim"];
 
-$txt = preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">http://$3</a>$4'", $txt);
+// Broken for some reason. 
+//$txt = preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">http://$3</a>$4'", $txt);
 
 $txt = Parsedown::instance()->parse($txt);
 
@@ -34,12 +35,12 @@ die("File upload error");
 
 }
 
-if (isset($_POST["txt"]) && isset($_POST["tim"])) {
+if (isset($txt) && isset($tim)) {
 
 include "../connect.php";
 
 $mysql_table = MYSQL_TABLE;
-$qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysqli_real_escape_string(nl2br($txt.$extrl))."', '".mysqli_real_escape_string($tim)."')";
+$qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysqli_real_escape_string($db, nl2br($txt.$extrl))."', '".mysqli_real_escape_string($db, $tim)."')";
 $result = mysqli_query($db, $qry);
 
 if (!$result) {

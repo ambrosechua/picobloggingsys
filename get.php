@@ -5,7 +5,7 @@ include 'checklogin.php';
 include "connect.php";
 
 $mysql_table = MYSQL_TABLE;
-$qry="SELECT * FROM `$mysql_table` ORDER BY  `$mysql_table`.`id` ASC LIMIT ".mysqli_real_escape_string($_GET["lastid"])." , 1000";
+$qry="SELECT * FROM `$mysql_table` ORDER BY  `$mysql_table`.`id` ASC LIMIT ".mysqli_real_escape_string($db, $_GET["lastid"])." , 1000";
 $result=mysqli_query($db, $qry);
 $newlastid=$_GET["lastid"];
 $jspo=array();
