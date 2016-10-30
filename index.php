@@ -43,9 +43,9 @@ include 'checklogin.php';
 		include "connect.php";
 		$mysql_table = MYSQL_TABLE;
 		$qry="SELECT * FROM `$mysql_table` ORDER BY `$mysql_table`.`id` DESC LIMIT 0, 30 ";
-		$result=mysql_query($qry);
+		$result=mysqli_query($qry);
 		$iffirst=0;
-		while ($row = mysql_fetch_array($result)) {
+		while ($row = mysqli_fetch_array($result)) {
 			$postlinked = stripslashes($row["txt"]);
 			echo '<span class="post postid'.$row["id"].'"><div class="t"><span class="loadingh"></span>'.$postlinked.'</div><div class="i">'.$row["tim"].'</div></span>';
 			if ($iffirst==0) {
@@ -53,7 +53,7 @@ include 'checklogin.php';
 				$iffirst=1;
 			}
 		}
-		mysql_close($link);
+		mysqli_close($link);
 		?>
 		</div><!-- 
 		<br /><br /> -->

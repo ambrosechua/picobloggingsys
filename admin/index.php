@@ -39,15 +39,15 @@ if (isset($_POST["txt"]) && isset($_POST["tim"])) {
 include "../connect.php";
 
 $mysql_table = MYSQL_TABLE;
-$qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysql_escape_string(nl2br($txt.$extrl))."', '".mysql_escape_string($tim)."')";
-$result = mysql_query($qry);
+$qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysqli_escape_string(nl2br($txt.$extrl))."', '".mysqli_escape_string($tim)."')";
+$result = mysqli_query($qry);
 
 if (!$result) {
-    die("Error! ".mysql_error());
+    die("Error! ".mysqli_error());
 } else {
 	$allok = 1;
 }
-mysql_close($link);
+mysqli_close($link);
 
 }
 ?>

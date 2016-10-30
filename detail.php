@@ -5,11 +5,11 @@ include 'checklogin.php';
 include "connect.php";
 
 $mysql_table = MYSQL_TABLE;
-$qry="SELECT * FROM `$mysql_table` WHERE `id`='".mysql_escape_string($_GET["id"])."'";
-$result=mysql_query($qry);
+$qry="SELECT * FROM `$mysql_table` WHERE `id`='".mysqli_escape_string($_GET["id"])."'";
+$result=mysqli_query($qry);
 if($result) {
-    if(mysql_num_rows($result) == 1) {
-	    $row = mysql_fetch_array($result);
+    if(mysqli_num_rows($result) == 1) {
+	    $row = mysqli_fetch_array($result);
 ?>
 			<div class="t tp">
 			<?php
@@ -29,5 +29,5 @@ if($result) {
 <?php
 	}
 }
-mysql_close($link);
+mysqli_close($link);
 ?>
