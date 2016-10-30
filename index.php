@@ -45,6 +45,7 @@ include 'checklogin.php';
 		$qry="SELECT * FROM `$mysql_table` ORDER BY `$mysql_table`.`id` DESC LIMIT 0, 30 ";
 		$result=mysqli_query($qry);
 		$iffirst=0;
+		$newlastid="null";
 		while ($row = mysqli_fetch_array($result)) {
 			$postlinked = stripslashes($row["txt"]);
 			echo '<span class="post postid'.$row["id"].'"><div class="t"><span class="loadingh"></span>'.$postlinked.'</div><div class="i">'.$row["tim"].'</div></span>';
