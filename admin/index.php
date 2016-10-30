@@ -13,7 +13,7 @@ $tim=$_POST["tim"];
 
 $txt = Parsedown::instance()->parse($txt);
 
-if (isset($_FILES["file"]) && isset($_FILES["file"]["name"])) {
+if (isset($_FILES["file"]) && $_FILES["file"]["name"]) {
 $allok = 0;
 
 $uploadLocation = "../" . UPLOAD_LOCATION . "";
