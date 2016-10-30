@@ -39,7 +39,7 @@ if (isset($_POST["txt"]) && isset($_POST["tim"])) {
 include "../connect.php";
 
 $mysql_table = MYSQL_TABLE;
-$qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysqli_escape_string(nl2br($txt.$extrl))."', '".mysqli_escape_string($tim)."')";
+$qry = "INSERT INTO `$mysql_table` (`id`, `txt`, `tim`) VALUES (NULL, '".mysqli_real_escape_string(nl2br($txt.$extrl))."', '".mysqli_real_escape_string($tim)."')";
 $result = mysqli_query($db, $qry);
 
 if (!$result) {

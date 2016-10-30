@@ -5,7 +5,7 @@ include 'checklogin.php';
 include "connect.php";
 
 $mysql_table = MYSQL_TABLE;
-$qry="SELECT * FROM `$mysql_table` WHERE `id`='".mysqli_escape_string($_GET["id"])."'";
+$qry="SELECT * FROM `$mysql_table` WHERE `id`='".mysqli_real_escape_string($_GET["id"])."'";
 $result=mysqli_query($db, $qry);
 if($result) {
     if(mysqli_num_rows($result) == 1) {

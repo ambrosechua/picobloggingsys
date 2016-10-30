@@ -8,7 +8,7 @@ $stars=0;
 $starred="";
 
 $mysql_table = MYSQL_TABLE;
-$qrya="SELECT * FROM `$mysql_table` WHERE `id`='".mysqli_escape_string($_GET["id"])."'";
+$qrya="SELECT * FROM `$mysql_table` WHERE `id`='".mysqli_real_escape_string($_GET["id"])."'";
 $resulta=mysqli_query($db, $qrya);
 if($resulta) {
     if(mysqli_num_rows($resulta) == 1) {
@@ -20,7 +20,7 @@ if($resulta) {
 $stars=$stars+1;
 
 if (isset($_GET["plusone"])) {
-	$qryb="UPDATE `$mysql_table` SET `pluses`='".($stars)."' WHERE `id`='".mysqli_escape_string($_GET["id"])."'";
+	$qryb="UPDATE `$mysql_table` SET `pluses`='".($stars)."' WHERE `id`='".mysqli_real_escape_string($_GET["id"])."'";
 	$resultb=mysqli_query($db, $qryb);
 	if($resultb) {
 		$starred="Thanks for a ★! ";
