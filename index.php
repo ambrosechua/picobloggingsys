@@ -50,7 +50,7 @@ include 'checklogin.php';
 			$postlinked = stripslashes($row["txt"]);
 			echo '<span class="post postid'.$row["id"].'"><div class="t"><span class="loadingh"></span>'.$postlinked.'</div><div class="i">'.$row["tim"].'</div></span>';
 			if ($iffirst==0) {
-				$newlastid=$row["id"]+1;
+				$newlastid=$row["id"];
 				$iffirst=1;
 			}
 		}
